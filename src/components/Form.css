@@ -1,0 +1,15 @@
+.Form {
+  display: flex;
+  justify-content: space-between;
+  flex: 1;
+  flex-wrap: wrap;
+}
+
+.Label {
+  padding: 5px;
+}
+
+.Input {
+  padding: 5px;
+  margin: 5px 10px;
+}

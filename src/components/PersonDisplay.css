@@ -1,0 +1,14 @@
+.Row {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 10px;
+}
+
+.Red {
+  color: red;
+}
+
+.Green {
+  color: green;
+}

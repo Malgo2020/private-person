@@ -17,8 +17,11 @@ const MainPage = () => {
         <>
           <CheckSavingsForm />
           <h4>Manage people:</h4>
-          {people.map((person) => (
-            <DisplayPerson person={person} />
+          {people.map((person, index) => (
+            <DisplayPerson
+              person={person}
+              key={`${person.getName()}${index}`}
+            />
           ))}
         </>
       ) : (

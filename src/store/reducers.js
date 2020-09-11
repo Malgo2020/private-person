@@ -1,7 +1,7 @@
 import { SET_QUERY, ADD_PERSON, CHECK_QUERY } from "./actions";
 
 const initialState = {
-  query: null,
+  query: "",
   people: [],
   toBeChecked: false,
 };

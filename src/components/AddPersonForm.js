@@ -4,7 +4,7 @@ import Card from "./UICard";
 import { addPerson } from "../store/actions";
 import "./Form.css";
 
-const AddPersonForm = (props) => {
+const AddPersonForm = () => {
   const [name, setName] = useState("");
   const [age, setAge] = useState("");
 

@@ -4,7 +4,7 @@ import { setQuery, checkQuery } from "../store/actions";
 import Card from "./UICard";
 import "./Form.css";
 
-const CheckSavingsForm = (props) => {
+const CheckSavingsForm = () => {
   const query = useSelector((state) => state.query);
   const querySet = useSelector((state) => state.toBeChecked);
 

@@ -58,7 +58,7 @@ const AddPersonForm = () => {
           onClick={handleSubmit}
           disabled={!name || !age}
         >
-          Add new person
+          Add a new person
         </button>
       </form>
     </Card>

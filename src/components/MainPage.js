@@ -10,9 +10,8 @@ const MainPage = () => {
 
   return (
     <div className="AppScreen">
-      <h4>Add new person:</h4>
+      <h4>Add a new person:</h4>
       <AddPersonForm />
-
       {people.length > 0 ? (
         <>
           <CheckSavingsForm />
@@ -25,7 +24,7 @@ const MainPage = () => {
           ))}
         </>
       ) : (
-        <h4>Please add new person!</h4>
+        <h4>Please add a new person!</h4>
       )}
     </div>
   );

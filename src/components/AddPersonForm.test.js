@@ -7,7 +7,7 @@ describe("AddPersonForm", () => {
     render(<AddPersonForm />);
   });
 
-  test("has a Add new person button that is initially disabled", () => {
+  test("has a Add a new person button that is initially disabled", () => {
     const button = screen.getByRole("button");
     expect(button).toBeInTheDocument();
     expect(button).toBeDisabled();

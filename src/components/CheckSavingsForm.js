@@ -1,22 +1,22 @@
-import React from "react";
+import React, { useState } from "react";
 import { useSelector, useDispatch } from "react-redux";
-import { setQuery, checkQuery } from "../store/actions";
+import { setQuery } from "../store/actions";
 import Card from "./UICard";
 import "./Form.css";
 
 const CheckSavingsForm = () => {
+  const [queryInput, setQueryInput] = useState("");
   const query = useSelector((state) => state.query);
-  const querySet = useSelector((state) => state.toBeChecked);
 
   const dispatch = useDispatch();
 
   const handleQueryChange = (event) => {
-    dispatch(checkQuery(false));
-    dispatch(setQuery(event.target.value));
+    dispatch(setQuery(""));
+    setQueryInput(event.target.value);
   };
 
   const handleCheckQuery = () => {
-    dispatch(checkQuery(true));
+    dispatch(setQuery(queryInput));
   };
 
   return (
@@ -27,7 +27,7 @@ const CheckSavingsForm = () => {
           className="Input"
           name="query"
           type="number"
-          value={query}
+          value={queryInput}
           onChange={handleQueryChange}
         />
       </label>
@@ -35,7 +35,7 @@ const CheckSavingsForm = () => {
         className="Button"
         type="button"
         onClick={handleCheckQuery}
-        disabled={!query || querySet}
+        disabled={!queryInput || query}
       >
         Check Savings
       </button>

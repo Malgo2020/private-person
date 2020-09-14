@@ -6,7 +6,6 @@ import "./PersonDisplay.css";
 
 const DisplayPerson = (props) => {
   const { person } = props;
-  const checkQuery = useSelector((state) => state.toBeChecked);
   const query = useSelector((state) => state.query);
 
   const [savingsMessage, setSavingsMessage] = useState("");
@@ -16,14 +15,14 @@ const DisplayPerson = (props) => {
   const [isRed, setIsRed] = useState(false);
 
   useEffect(() => {
-    if (checkQuery) {
+    if (query) {
       const result = person.hasEnoughSavings(query);
       setIsRed(!result);
       result
         ? setSavingsMessage(`${person.getName()} has enough savings`)
         : setSavingsMessage(`${person.getName()} does not have enough savings`);
     }
-  }, [checkQuery, query, person, paycheckCount]);
+  }, [query, person, paycheckCount]);
 
   const givePaycheck = () => {
     person.givePaycheck();
@@ -40,7 +39,7 @@ const DisplayPerson = (props) => {
         <p>
           {person.getName()} ({person.getAge()})
         </p>
-        {checkQuery && savingsMessage && (
+        {query && savingsMessage && (
           <p className={isRed ? "Red" : "Green"}>{savingsMessage}</p>
         )}
       </div>

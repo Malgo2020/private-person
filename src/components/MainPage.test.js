@@ -4,12 +4,12 @@ import MainPage from "./MainPage";
 import Person from "../models/Person";
 
 describe("MainPage", () => {
-  test("Displays Please add new person prompt with empty people array", () => {
+  test("Displays Please add a new person prompt with empty people array", () => {
     render(<MainPage />, {
       initialState: { people: [] },
     });
 
-    expect(screen.getByText(/Please add new person/i)).toBeInTheDocument();
+    expect(screen.getByText(/Please add a new person/i)).toBeInTheDocument();
   });
 
   test("Displays Manage people when people array contains a person", () => {
@@ -44,7 +44,7 @@ describe("MainPage", () => {
     mockPerson.setName("Fred");
     mockPerson.setAge(21);
     render(<MainPage />, {
-      initialState: { people: [mockPerson], query: "" },
+      initialState: { people: [mockPerson] },
     });
     const queryInput = screen.getByRole("spinbutton", {
       name: "Amount",

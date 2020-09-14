@@ -2,13 +2,15 @@
   width: 100%;
   display: flex;
   justify-content: space-between;
+  align-items: center;
   margin-bottom: 10px;
+  flex-wrap: wrap;
 }
 
 .Red {
-  color: red;
+  color: #cc0000;
 }
 
 .Green {
-  color: green;
+  color: #00cc00;
 }

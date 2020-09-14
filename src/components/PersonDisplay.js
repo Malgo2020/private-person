@@ -30,7 +30,7 @@ const DisplayPerson = (props) => {
     setIsRed(false);
     setPaycheckCount(paycheckCount + 1);
     paycheckCount > 0
-      ? setPaycheckMessage(`${paycheckCount + 1} paychecks has been given.`)
+      ? setPaycheckMessage(`${paycheckCount + 1} paychecks have been given.`)
       : setPaycheckMessage("Paycheck has been given.");
   };
 
@@ -41,9 +41,7 @@ const DisplayPerson = (props) => {
           {person.getName()} ({person.getAge()})
         </p>
         {checkQuery && savingsMessage && (
-          <p className={isRed ? "Red" : "Green"}>
-            <strong>{savingsMessage}</strong>
-          </p>
+          <p className={isRed ? "Red" : "Green"}>{savingsMessage}</p>
         )}
       </div>
       <div className="Row">

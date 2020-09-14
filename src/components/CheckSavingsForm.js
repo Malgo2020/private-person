@@ -22,7 +22,7 @@ const CheckSavingsForm = () => {
   return (
     <Card>
       <label className="Label">
-        Check amount:
+        Amount
         <input
           className="Input"
           name="query"

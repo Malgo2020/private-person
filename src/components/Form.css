@@ -7,9 +7,26 @@
 
 .Label {
   padding: 5px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  min-width: 245px;
+  flex-wrap: wrap;
 }
 
 .Input {
   padding: 5px;
   margin: 5px 10px;
+  border: 1px solid #b6b5b6;
+}
+
+@media only screen and (max-width: 350px) {
+  .Label {
+    min-width: unset;
+  }
+
+  .Input {
+    margin: 10px 0px;
+    width: 100%;
+  }
 }

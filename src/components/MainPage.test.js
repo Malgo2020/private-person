@@ -47,7 +47,7 @@ describe("MainPage", () => {
       initialState: { people: [mockPerson], query: "" },
     });
     const queryInput = screen.getByRole("spinbutton", {
-      name: "Check amount:",
+      name: "Amount",
     });
     const queryButton = screen.getByRole("button", { name: "Check Savings" });
     const paycheckButton = screen.getByRole("button", {
